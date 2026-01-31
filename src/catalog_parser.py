@@ -68,7 +68,7 @@ def process_catalog(pdf_path):
 
             for line in lines:
 
-                # 1️⃣ BEST CASE: SKU + MRP pairs on same line
+                # 1️ BEST CASE: SKU + MRP pairs on same line
                 pairs = SKU_MRP_PATTERN.findall(line)
                 if pairs:
                     for sku, mrp in pairs:
@@ -82,7 +82,7 @@ def process_catalog(pdf_path):
                         })
                     continue
 
-                # 2️⃣ FALLBACK: SKU(s) without inline price
+                # 2️ FALLBACK: SKU(s) without inline price
                 skus_found = SKU_PATTERN.findall(line)
                 if skus_found:
                     for sku in skus_found:
@@ -96,7 +96,7 @@ def process_catalog(pdf_path):
                         })
                     continue
 
-                # 3️⃣ CONTEXTUAL DATA (name / description / price)
+                # 3️ CONTEXTUAL DATA (name / description / price)
                 if products:
                     last_product = products[-1]
 

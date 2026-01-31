@@ -1,4 +1,22 @@
+# Virtual environments
 python_env_pdf/
+venv/
+.env/
+
+# Python cache
 __pycache__/
 *.pyc
-.env
+
+# Generated outputs
+data/output/
+data/output/**
+
+# Extracted images
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Excel & JSON outputs
+*.xlsx
+*.json

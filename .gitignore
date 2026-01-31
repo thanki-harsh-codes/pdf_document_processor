@@ -1,0 +1,4 @@
+python_env_pdf/
+__pycache__/
+*.pyc
+.env
